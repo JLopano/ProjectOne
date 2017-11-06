@@ -8,8 +8,14 @@
 
 int main(int argc, char** argv) {
 
+    //Variables
+    Stock *stks = nullptr;  //Input - Pointer to dynamically allocated array.
+    
     //Prints Introduction
     PrntIntro();
+    
+    //Initializes Stocks
+    stks = InitStck();
     
     return 0;
 }
