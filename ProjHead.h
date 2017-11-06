@@ -19,7 +19,7 @@ using namespace std;
 //Structures
 struct Stock{
     string  name;          //Input - Stock name.
-    float   strtVal;       //Input - Stock initial value.
+    float   value;         //Input - Stock value.
     float   percent[4];    //Input - Percent the stock can increase per day.     
 };
 
@@ -38,7 +38,7 @@ void PrntIntro();
  * MainMenu                                                                    *
  * Displays the main menu.                                                     *
  ******************************************************************************/
-//void MainMenu();
+int MainMenu(Player*);
 
 /*******************************************************************************
  * InitStck                                                                    *
@@ -55,5 +55,11 @@ Stock* InitStck();
  * RETURNS: Pointer to Player structure.                                       *
  ******************************************************************************/
 Player* InitPlyr();
+
+/*******************************************************************************
+ * UpStock                                                                     *
+ * Updates values of stocks after first day.                                   *
+ ******************************************************************************/
+void UpStock(Stock*);
 
 #endif /* PROJHEAD_H */

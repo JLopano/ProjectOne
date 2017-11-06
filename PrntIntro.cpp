@@ -16,7 +16,7 @@ void PrntIntro()
                 "decided to venture into the stock market."
          << endl
          << "You start the game with $1,000 and your goal is to make as much "
-                "money as you can in 10 days by trading stocks."
+                "money as you can in 7 days by trading stocks."
          << endl
          << "Good luck, have fun!"
          << endl
