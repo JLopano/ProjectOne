@@ -66,8 +66,22 @@ void UpStock(Stock*);
 
 /*******************************************************************************
  * BuyStck                                                                     *
- * Menu where stocks are purchased.                                            *
+ * Function where stocks are purchased.                                        *
  ******************************************************************************/
 void BuyStck(Stock*, Player*, int);
+
+/*******************************************************************************
+ * SellStck                                                                    *
+ * Function where stocks are sold.                                             *
+ ******************************************************************************/
+void SellStck(Stock*, Player*, int);
+
+/*******************************************************************************
+ * StkAmnt                                                                     *
+ * Function that checks whether the player has stocks to sell.                 *
+ *                                                                             *
+ * RETURNS: Boolean value.                                                     *
+ ******************************************************************************/
+bool StkAmnt(Stock*, int);
 
 #endif /* PROJHEAD_H */

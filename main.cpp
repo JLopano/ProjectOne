@@ -43,6 +43,9 @@ int main(int argc, char** argv) {
             case 1:
                 BuyStck(stks, plyr, i);
                 break;
+            case 2:
+                SellStck(stks, plyr, i);
+                break;
             default:
                 break;
         }

@@ -1,12 +1,12 @@
 /*******************************************************************************
  * Author       : Jesus Lopez                                                  *
- * Assignment   : Project One Buy Stock                                        *
+ * Assignment   : Project One Sell Stocks                                      *
  * Date         : 11/5/17                                                      *
  * Class        : CSC 17-A                                                     *
  ******************************************************************************/
 #include "ProjHead.h"
 
-void BuyStck(Stock* s, Player* p, int day)
+void SellStck(Stock* s, Player* p, int day)
 {
     //Variables
     int  choice;        //Input - User choice.
@@ -68,7 +68,7 @@ void BuyStck(Stock* s, Player* p, int day)
       
     //Asks & Retrieves Information
     cout << endl << "Enter the number that corresponds with the stock you want "
-            "to buy: ";
+            "to sell: ";
     
     cin >> choice;
     
@@ -105,7 +105,7 @@ void BuyStck(Stock* s, Player* p, int day)
     do
     {
         //Asks and Retrieves Purchase Information
-        cout << "Enter amount of stocks you want to buy: ";
+        cout << "Enter amount of stocks you want to sell: ";
 
         cin >> amount;
 
@@ -117,15 +117,14 @@ void BuyStck(Stock* s, Player* p, int day)
             cin >> amount;
         }
 
-        //Calculates & Verifies Total Amount
-        total = amount * s[choice].value;
+        if(amount > s[choice].count)
+                cout << "You do not have enough stocks to sell." << endl;
         
-        if(total > p->money)
-            cout << "You cannot afford that many." << endl;
-        
-        if(total <= p->money)
+        if(amount <= s[choice].count)
         {
-            p->money = p->money - total;
+            //Calculates & Verifies Total Amount
+            total = amount * s[choice].value;
+            p->money = p->money + total;
             s[choice].count = s[choice].count + amount;
             valid = true;
         }
