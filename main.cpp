@@ -15,6 +15,7 @@ int main(int argc, char** argv) {
     Stock  *stks  = nullptr;  //Input - Pointer to dynamically allocated array.
     Player *plyr  = nullptr;  //Input - Pointer to dynamic structure.
     int    choice;            //Input - User menu choice.
+    char   save;              //Input - If user wants to save score.
     
     //Prints Introduction
     PrntIntro();
@@ -52,7 +53,12 @@ int main(int argc, char** argv) {
         
         //Updates Player's Assets
         UpPlyr(stks, plyr);
+        
+        cin.ignore();
     }
+    
+    //Displays Final Stats
+    Stats(stks, plyr);
+    
     return 0;
 }
-

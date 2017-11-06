@@ -19,7 +19,8 @@ int MainMenu(Stock *s ,Player *p, int day)
          << "Stocks: $" << p->assets << endl << endl;
     
     cout << "1. Buy Stocks" << endl
-         << "2. Sell Stocks" << endl << endl;
+         << "2. Sell Stocks" << endl 
+         << "3. Hold" << endl << endl;
          
     do
     {
@@ -37,7 +38,7 @@ int MainMenu(Stock *s ,Player *p, int day)
             cin >> choice;
         }
 
-        while(choice > 2 || choice < 1)
+        while(choice > 3 || choice < 1)
         {
             cout << "Invalid Input. Enter a Valid Option: ";
             cin.clear();

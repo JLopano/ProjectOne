@@ -18,16 +18,17 @@ using namespace std;
 
 //Structures
 struct Stock{
-    string  name;          //Input - Stock name.
-    float   value;         //Input - Stock value.
-    float   percent[4];    //Input - Percent the stock can increase per day. 
-    int     count = 0;         //Input - Amount of stocks user holds.
+    string  name;          //Input  - Stock name.
+    float   value;         //Input  - Stock value.
+    float   percent[4];    //Input  - Percent the stock can increase per day. 
+    int     count = 0;     //Input  - Amount of stocks user holds.
 };
 
 struct Player{
-    string name;           //Input - Player name.
-    float  money = 1000;   //Input - Player's money.
-    float  assets = 0;     //Input - Player's stock value.
+    string name;           //Input  - Player name.
+    float  money = 1000;   //Input  - Player's money.
+    float  assets = 0;     //Input  - Player's stock value.
+    float  total;          //Output - Player's final score.
 };
 
 /*******************************************************************************
@@ -89,5 +90,11 @@ bool StkAmnt(Stock*, int);
  * Function that updates player's assets.                                      *
  ******************************************************************************/
 void UpPlyr(Stock*, Player*);
+
+/*******************************************************************************
+ * Stats                                                                       *
+ * Displays player's final stats.                                              *
+ ******************************************************************************/
+void Stats(Stock*, Player*);
 
 #endif /* PROJHEAD_H */
