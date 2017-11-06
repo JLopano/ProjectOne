@@ -49,6 +49,9 @@ int main(int argc, char** argv) {
             default:
                 break;
         }
+        
+        //Updates Player's Assets
+        UpPlyr(stks, plyr);
     }
     return 0;
 }

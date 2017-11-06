@@ -9,10 +9,11 @@
 void BuyStck(Stock* s, Player* p, int day)
 {
     //Variables
-    int  choice;        //Input - User choice.
-    int  amount;        //Input - Amount of stocks chosen.
-    int  total;         //Input - Total price of stocks.
-    bool valid = false; //Calc  - Determines valid transaction.
+    int  choice;        //Input  - User choice.
+    int  amount;        //Input  - Amount of stocks chosen.
+    int  total;         //Input  - Total price of stocks.
+    int  max;           //Output - Max amount of stocks user can buy.
+    bool valid = false; //Calc   - Determines valid transaction.
     
     //Displays Player Information
     cout << left << fixed << setprecision(2)
@@ -99,8 +100,12 @@ void BuyStck(Stock* s, Player* p, int day)
          << "Money: $" << setw(10) << p->money
          << "Stocks: $" << p->assets << endl << endl;
     
+    //Calculates Max Purchase
+    max = p->money / s[choice].value;
+    
     //Displays Stock Name && Value
-    cout << s[choice].name << ": $" << s[choice].value << endl << endl;
+    cout << s[choice].name << ": $" << s[choice].value << endl 
+         << "Max: " << max << endl;
     
     do
     {

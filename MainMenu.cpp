@@ -9,7 +9,7 @@
 int MainMenu(Stock *s ,Player *p, int day)
 {
     //Variables
-    int  choice;        //Input - Player menu choice.
+    int  choice; //Input - Player menu choice.
     bool valid;  //Calc - Whether option two is valid.
     
     //Display Options
