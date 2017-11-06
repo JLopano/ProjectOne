@@ -19,8 +19,13 @@ using namespace std;
 //Structures
 struct Stock{
     string  name;          //Input - Stock name.
-    float   strtVal;       //Input - Stock's initial value.
+    float   strtVal;       //Input - Stock initial value.
     float   percent[4];    //Input - Percent the stock can increase per day.     
+};
+
+struct Player{
+    string name;           //Input - Player name.
+    float  money = 1000;   //Input - Player's money.
 };
 
 /*******************************************************************************
@@ -42,5 +47,13 @@ void PrntIntro();
  * RETURNS: Pointer to dynamically allocated array.                            *
  ******************************************************************************/
 Stock* InitStck();
+
+/*******************************************************************************
+ * InitPlyr                                                                    *
+ * Dynamically allocates a player structure and asks for player name.          *
+ *                                                                             *
+ * RETURNS: Pointer to Player structure.                                       *
+ ******************************************************************************/
+Player* InitPlyr();
 
 #endif /* PROJHEAD_H */

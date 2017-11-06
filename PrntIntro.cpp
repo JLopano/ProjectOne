@@ -21,8 +21,7 @@ void PrntIntro()
          << "Good luck, have fun!"
          << endl
          << endl
-         << "Press any key to continue."
-         << endl;
+         << "Press Enter to continue.";
     
     cin.get();
     system("clear");

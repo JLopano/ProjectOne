@@ -9,7 +9,7 @@
 Stock* InitStck()
 {
     //Variables
-    int   size = 9;        //Input - Size of stock array.
+    int   size = 9;         //Input - Size of stock array.
     Stock *ar  = nullptr;   //Input - Null pointer to stock array/
     
     //Dynamically Creates New Array
