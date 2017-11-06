@@ -40,7 +40,7 @@ void PrntIntro();
  * MainMenu                                                                    *
  * Displays the main menu.                                                     *
  ******************************************************************************/
-int MainMenu(Player*, int);
+int MainMenu(Stock*, Player*, int);
 
 /*******************************************************************************
  * InitStck                                                                    *
@@ -80,7 +80,7 @@ void SellStck(Stock*, Player*, int);
  * StkAmnt                                                                     *
  * Function that checks whether the player has stocks to sell.                 *
  *                                                                             *
- * RETURNS: Boolean value.                                                     *
+ * RETURNS: Boolean value which determines whether player can sell stocks.     *
  ******************************************************************************/
 bool StkAmnt(Stock*, int);
 

@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
     for(int i = 0; i < 7; i++)
     {    
         //Displays Main Menu
-        choice = MainMenu(plyr, i);
+        choice = MainMenu(stks, plyr, i);
         
         //Updates Stock Values After First Day
         if(i > 0)
