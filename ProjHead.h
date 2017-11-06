@@ -20,12 +20,14 @@ using namespace std;
 struct Stock{
     string  name;          //Input - Stock name.
     float   value;         //Input - Stock value.
-    float   percent[4];    //Input - Percent the stock can increase per day.     
+    float   percent[4];    //Input - Percent the stock can increase per day. 
+    int     count = 0;         //Input - Amount of stocks user holds.
 };
 
 struct Player{
     string name;           //Input - Player name.
     float  money = 1000;   //Input - Player's money.
+    float  assets = 0;     //Input - Player's stock value.
 };
 
 /*******************************************************************************
@@ -38,7 +40,7 @@ void PrntIntro();
  * MainMenu                                                                    *
  * Displays the main menu.                                                     *
  ******************************************************************************/
-int MainMenu(Player*);
+int MainMenu(Player*, int);
 
 /*******************************************************************************
  * InitStck                                                                    *
@@ -61,5 +63,11 @@ Player* InitPlyr();
  * Updates values of stocks after first day.                                   *
  ******************************************************************************/
 void UpStock(Stock*);
+
+/*******************************************************************************
+ * BuyStck                                                                     *
+ * Menu where stocks are purchased.                                            *
+ ******************************************************************************/
+void BuyStck(Stock*, Player*, int);
 
 #endif /* PROJHEAD_H */

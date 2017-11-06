@@ -29,12 +29,22 @@ int main(int argc, char** argv) {
     for(int i = 0; i < 7; i++)
     {    
         //Displays Main Menu
-        choice = MainMenu(plyr);
+        choice = MainMenu(plyr, i);
         
         //Updates Stock Values After First Day
         if(i > 0)
         {
             UpStock(stks);
+        }
+        
+        //User Option
+        switch(choice)
+        {
+            case 1:
+                BuyStck(stks, plyr, i);
+                break;
+            default:
+                break;
         }
     }
     return 0;

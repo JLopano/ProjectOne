@@ -6,20 +6,20 @@
  ******************************************************************************/
 #include "ProjHead.h"
 
-int MainMenu(Player *p)
+int MainMenu(Player *p, int day)
 {
     //Variables
     int choice;     //Input - Player Menu Choice
     
     //Display Options
-    cout << left << fixed << setprecision(2);
-    cout << p->name << endl
+    cout << left << fixed << setprecision(2)
+         << p->name << "  Day: " << day + 1 << endl
          << "Money: $" << setw(10) << p->money
-         << "Stocks: $" << endl << endl;
+         << "Stocks: $" << p->assets << endl << endl;
     
-    cout << "Choose an option." << endl << endl
-         << "1. Buy Stocks" << endl
-         << "2. Sell Stocks" << endl;
+    cout << "1. Buy Stocks" << endl
+         << "2. Sell Stocks" << endl << endl
+         << "Choose an option: ";
     
     //Input Validation
     cin >> choice;
@@ -35,6 +35,7 @@ int MainMenu(Player *p)
     while(choice > 2 || choice < 1)
     {
         cout << "Invalid Input. Enter a Valid Option: ";
+        cin.clear();
         cin.ignore();
         cin >> choice;
     }
